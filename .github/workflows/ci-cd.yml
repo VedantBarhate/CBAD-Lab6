@@ -2,7 +2,7 @@ name: CBAD Lab 6 - CI/CD Pipeline
 
 on:
   push:
-    branch: ["main"]
+    branches: ["main"]
   pull_request:
 
 jobs:
@@ -15,8 +15,8 @@ jobs:
 
     - name: Set up python
       uses: actions/setup-python@v5
-        with:
-          python-version: '3.10'
+      with:
+        python-version: '3.10'
 
     - name: Install dependencies
       run: |
@@ -39,4 +39,4 @@ jobs:
     
     - name: Push Docker Image
       run: |
-      dokcer push ${{ secrets.DOCKER_USERNAME }}/CBAD-L6:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/CBAD-L6:latest
