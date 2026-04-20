@@ -24,7 +24,7 @@ jobs:
     
     - name: Run tests
       run: |
-        pytest
+        pytest tests/
 
     # Docker steps
     - name: Login to Docker Hub
